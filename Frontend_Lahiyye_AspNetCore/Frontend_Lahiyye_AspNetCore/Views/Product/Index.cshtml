@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProductVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <main>
+        <section id="ProductHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="productHeader">
+                            <h1>Product List</h1>
+                            <span>Where flowers are our inspiration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="ProductImages">
+            <div class="container">
+                <div class="row mainproduct">
+                 @*<partial name="_ProductPartial" />*@
+                    @await Component.InvokeAsync("Products",4)
+
+                </div>
+                <div class="row justify-content-center mt-2">
+                    <input type="hidden" id="PrdouctCount" value="@ViewBag.ProductCount"  />
+                    <button class="btn btn-success"id="loadMore" >Load More</button>
+                </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+

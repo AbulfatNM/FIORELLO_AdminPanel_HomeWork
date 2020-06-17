@@ -1,0 +1,851 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Main start -->
+<main>
+    <!-- Slider section start -->
+    <section id="Slider">
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="slider">
+                    <div class="images">
+                        @foreach (Slider Image in Model.Sliders)
+                        {
+                            <div class="item activeImages">
+                                <img src="images/@Image.Image" alt="#">
+                            </div>
+                        }
+                    </div>
+                    <div class="paragraf">
+
+                        <div class="paragrafHeader">
+                            <p>@Model.Content.Title</p>
+                        </div>
+
+                        <p>
+                            @Model.Content.Description
+                        </p>
+                        <img src="images/@Model.Content.Image" alt="#">
+                    </div>
+                    <div class="icon_right icons">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </div>
+                    <div class="icon_left icons">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slider section end -->
+    <!-- Product section start -->
+    <section id="Product">
+        <div class="container ">
+            <div class="row mt-5">
+                <div class="col-lg-8">
+                    <div class="productMenu productMenuColor">
+                        <ul>
+                            <li id="All"><a href="#">All</a></li>
+                            @foreach (Category Cate in Model.Categories)
+                            {
+                                <li  id="@Cate.Name"><a href="#">@Cate.Name</a></li>
+
+                            }
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="productfillter">
+                        <h6>
+                            <ul>
+                                <li>
+                                    <a href="#">Filter</a><i class="fas fa-caret-down"></i>
+                                    <div class="filterMenu">
+                                        <div class="filterMenuLeft float-left">
+                                            <h4>Sort By</h4>
+                                            <ul class="d-block">
+                                                <li><a href="#">Default</a></li>
+                                                <li><a href="#">Popularity</a></li>
+                                                <li><a href="#">Newness</a></li>
+                                                <li><a href="#">Price: Low To High</a></li>
+                                                <li><a href="#">Price: High To Low</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="filterMenuRight">
+                                            <h4>Price Range</h4>
+                                            <ul class="d-block">
+                                                <li><a href="#">All</a></li>
+                                                <li><a href="#">$0-$10</a></li>
+                                                <li><a href="#">$10-$20</a></li>
+                                                <li><a href="#">$20-$30</a></li>
+                                                <li><a href="#">$30-$40</a></li>
+                                                <li><a href="#">40$+</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </h6>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="allImages">
+            <div class="container">
+                <div class="row">
+                    @await Component.InvokeAsync("Products",8)
+                    @*@foreach (Product Prod in Model.Products)
+                    {
+                        <div class="col-lg-3 card_hover">
+                            <div class="card cardMargin">
+                                <a   href="#"> <img src="images/@Prod.Image" class="card-img-top" alt="..."></a>
+                            </div>
+                            <div class="cardParagraf">
+                                <h6>@Prod.Title</h6>
+                                <div class="addToCards">
+                                    <a href="#">Add to cart</a>
+
+                                </div>
+                                <div class="price">
+                                    <span>@Prod.Price</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    }*@
+
+                </div>
+            </div>
+        </div>
+        <div class="popularImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-14-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href=""><img src="images/shop-13-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>FOXGLOVE FLOWER</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-10-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="sold">
+                            <h4>Sold</h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>SPRING SNOWFLAKE</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#">  <img src="images/shop-11-img.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>SWEET ALYSSUM</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href=""><img src="images/shop-12-img.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="sale">
+                            <h4>Sale</h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="winterImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"> <img src="images/shop-14-img.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-13-img.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-10-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="sold">
+                            <h4>Sold</h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="variousImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#">  <img src="images/shop-9-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"> <img src="images/shop-8-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-7-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-6-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-5-img-233x300.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-4-img-233x300.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-3-img-233x300.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="sold">
+                            <h4>Sold</h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+
+                            <a href="#"><img src="images/shop-2-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exoticImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-7-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-6-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-2-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="greensImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-8-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-4-img-233x300.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-14-img.jpg" class="card-img-top" alt="..."></a>
+                        </div>
+                        <div class="new">
+                            <h4>
+                                New
+                            </h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="cactusesImages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-9-img.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-5-img-233x300.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 card_hover">
+                        <div class="card cardMargin">
+                            <a href="#"><img src="images/shop-3-img-233x300.jpg" class="card-img-top" alt="..."></a>
+
+                        </div>
+                        <div class="sold">
+                            <h4>Sold</h4>
+                        </div>
+                        <div class="cardParagraf">
+                            <h6>Majesty Palm</h6>
+                            <div class="addToCards">
+                                <a href="#">Add to cart</a>
+                            </div>
+                            <div class="price">
+                                <span>$259</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Product section end -->
+    <!-- Flower video section start -->
+    <section id="FlowerVideo">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6 colMargintop">
+                    <div class="video">
+                        <a href="https://www.youtube.com/watch?time_continue=1&amp;v=K-0cjGCNYfs&amp;_ga=2.56801961.281775222.1577202879-524313065.1577202879"
+                           target="_self" data-rel="prettyPhoto[video_button_pretty_photo_273]">
+                            <img src="images/h3-video-img-768x497.jpg" alt="#">
+                        </a>
+
+                    </div>
+                    <div class="videoIcon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="videoContent mt-5 ml-5">
+                        <h2>
+                            Suprise Your <span>Valentine!</span><br>
+                            Let us arrange a smile.
+                        </h2>
+                        <p>
+                            Where flowers are our inspiration to create lasting memories. Whatever the occasion...
+                        </p>
+                    </div>
+                    <div class="videoContenticons mt-4">
+                        <p><img src="images/h1-custom-icon.png" alt="#"> Hand picked just for you.</p>
+                        <p><img src="images/h1-custom-icon.png" alt="#">Unique flower arrangements</p>
+                        <p> <img src="images/h1-custom-icon.png" alt="#">Best way to say you care</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Flower video section end -->
+    <!-- About Us section start -->
+    <section id="AboutUs">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="aboutUsheader">
+                        <h2>Flower Experts</h2>
+                        <p>
+                            A perfect blend of creativity, energy, communication, happiness and love. Let us arrange
+                            a smile for you.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="aboutImages">
+                        <img src="images/h3-team-img-1.png" alt="#">
+                    </div>
+                    <div class="aboutImagesContent">
+                        <h6>CRYSTAL BROOKS</h6>
+                        <span>Florist</span>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="aboutImages">
+                        <img src="images/h3-team-img-2.png" alt="#">
+                    </div>
+                    <div class="aboutImagesContent">
+                        <h6>SHIRLEY HARRIS</h6>
+                        <span>Manager</span>
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="aboutImages">
+                        <img src="images/h3-team-img-3.png" alt="#">
+                    </div>
+                    <div class="aboutImagesContent">
+                        <h6>BEVERLY CLARK</h6>
+                        <span>Florist</span>
+                    </div>
+
+                </div>
+                <div class="col-lg-3">
+                    <div class="aboutImages">
+                        <img src="images/h3-team-img-4.png" alt="#">
+                    </div>
+                    <div class="aboutImagesContent">
+                        <h6>AMANDA WATKINS</h6>
+                        <span>Florist</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us section end -->
+    <!-- Contact section start -->
+    <section id="Contact">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="contactIput">
+                        <div class="input">
+                            <form action="#">
+                                <h2>Join The Colorful Bunch!</h2>
+                                <input type="email" placeholder="Email Address" name="emailaddress" required>
+                                <!-- <input type="email" placeholder="Email Address" id="myEmail" name="usremail" required> -->
+                                <!-- <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email Address"> -->
+                                <a href="#">SUBSCRIBES</a>
+                            </form>
+                        </div>
+                        <div class="inpuRrequired_False">
+                            <span>
+                                The field is required.
+                            </span>
+                            <p>One or more fields have an error. Please check and try again.</p>
+                        </div>
+                        <div class="inpuRrequired_True">
+
+                            <p>Thank you for your message. It has been sent.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section end -->
+    <!-- Blog section start -->
+    <section id="Blog">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-12 mt-3">
+                    <div class="blogHeader">
+                        <h2>From our Blog</h2>
+                        <p>
+                            A perfect blend of creativity, energy, communication, happiness <br> and love. Let us
+                            arrange a smile for you.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card blogCards ">
+                        <img src="images/blog-feature-img-1.jpg" class="card-img-top" alt="...">
+                        <div class="date">
+                            <p>27.04.2018</p>
+                        </div>
+                    </div>
+                    <div class="blogCardscontent">
+                        <h5><a href="#"> Flower Power</a></h5>
+                        <p class="card-text">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card blogCards">
+                        <img src="images/blog-feature-img-3.jpg" class="card-img-top" alt="...">
+                        <div class="date">
+                            <p>03.05.2018 </p>
+                        </div>
+                    </div>
+                    <div class="blogCardscontent">
+                        <h5><a href="#"> Local Florists</a></h5>
+
+                        <p class="card-text">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card blogCards">
+                        <img src="images/blog-feature-img-4.jpg" class="card-img-top" alt="...">
+                        <div class="date">
+                            <p>03.05.2018 </p>
+                        </div>
+
+                    </div>
+                    <div class="blogCardscontent">
+                        <h5><a href="#">Flower Beauty</a></h5>
+
+                        <p class="card-text">
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog section end -->
+    <!-- Worker slider start -->
+    <section id="WorkSlider">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 workerslideCol_Ml">
+                    <div class="workerslider  ">
+                        <div class="workerItemImages">
+                            <div class="workeritem  workersliderActive ">
+                                <img src="images/testimonial-img-1.png" alt="">
+                                <div class="workeritemContent ">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer <br> adipiscing elit. Aenean commodo
+                                        ligula eget.
+                                    </p>
+                                    <h5>Jasmine White</h5>
+                                    <h6>Florist</h6>
+                                </div>
+                            </div>
+
+                            <div class="workeritem   ">
+                                <img src="images/testimonial-img-2.png" alt="">
+                                <div class="workeritemContent ">
+                                    <p>
+                                        Nullam dictum felis eu pede mollis pretium. <br> Integer tincidunt. Cras
+                                        dapibus
+                                        lingua.
+                                    </p>
+                                    <h5>Anna Barnes</h5>
+                                    <h6>Florist</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workerSliderRightIcon workerSliderIcons">
+                            <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="workerSliderLeftIcon workerSliderIcons">
+                            <i class="fas fa-long-arrow-alt-left" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Worker slider end -->
+    <!-- Owl Carousel start -->
+    <section id="OwlCarousel">
+        <div class="owl-carousel owl-main-page">
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCEkWiHtWb/?_ga=2.48986470.1791108463.1578616664-524313065.1577202879"><img src="images/1.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCEimEHlK_/?_ga=2.11170036.1791108463.1578616664-524313065.1577202879"> <img src="images/2.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCEenznP2O/?_ga=2.11170036.1791108463.1578616664-524313065.1577202879"> <img src="images/3.jpg" alt=""></a>
+
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCD-suH5SW/?_ga=2.158982010.1791108463.1578616664-524313065.1577202879"><img src="images/4.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCD7IinlaR/?_ga=2.158982010.1791108463.1578616664-524313065.1577202879"><img src="images/5.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCD5XnnjdU/?_ga=2.158982010.1791108463.1578616664-524313065.1577202879"><img src="images/6.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCD1bKnxer/?_ga=2.15367798.1791108463.1578616664-524313065.1577202879"> <img src="images/7.jpg" alt=""></a>
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="item carouselItem">
+                <a href="https://www.instagram.com/p/BiCDy4wHeJl/?_ga=2.15367798.1791108463.1578616664-524313065.1577202879"> <img src="images/8.jpg" alt=""></a>
+
+                <div class="socialIcon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="fiorello">
+            <h4>
+                #Fiorello
+            </h4>
+        </div>
+        </sectionid>
+        <!-- Owl Carousel end -->
+</main>
+<!-- Main end -->

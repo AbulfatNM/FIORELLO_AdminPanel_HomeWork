@@ -1,0 +1,502 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 1900px;
+}
+ul li a:hover{
+    text-decoration: none;
+}
+.menu ul li div ul li  {
+    margin-top: 11px !important;
+}
+.menu .elementsMenu .typographyMenu ul li  {
+    margin: 7px !important;
+}
+.color ul li a{
+color: #737373 !important;
+
+}
+.containerPosetion{
+    position: relative;
+}
+.menu ul li a {
+    color: #1b1b1b;
+    position: relative;
+}
+.menu ul li a::after{
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: #1b1b1b;
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    transition: width .5s;
+}
+.menu ul li div ul li a::after{
+    content: "";
+    width: 0px;
+    height: 1px;
+    background-color: #6d6a6a;
+    position: absolute;
+    bottom: 0px ;
+    left: 0px ;
+    transition: width .5s;
+
+}
+.menu ul li div ul li a:hover::after{
+    width: 100%;
+}
+.menu ul li a:hover::after{
+    width: 65%;
+ 
+}
+/* home underline  */
+ /* .menu ul .homeUnerline a::after{
+    content: "";
+    width: 65%;
+    height: 1px;
+    background-color: #1b1b1b;
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    transition: width .5s;
+} */
+
+/* .menu ul li a:hover, .iconsSearch ul li a:hover{
+    text-decoration: none;
+} */
+.colFlex{
+    display: flex;
+}
+.logo{
+    width: 250px;
+    display: inline-block;
+}
+.logo img{
+    width: 100%;
+}
+.menu{
+    display: inline-block;
+
+}
+ul{
+    display: flex;
+}
+
+ul li {
+    list-style-type: none; 
+}
+
+.menu ul li a{
+ padding: 25px;
+}
+li ul a {
+    padding: 0px !important;
+}
+.home{
+    position: relative;
+
+}
+.home:hover .homeMenu{
+    visibility: visible !important;
+}
+
+.homeMenu ul{
+    display: block;
+}
+.homeMenu{
+    position: absolute;
+    top: 40px;
+    left: -35px;
+    padding-top: 60px;
+    width: 230px;
+     z-index: 1;
+     height: 360px;
+     background-color: white;
+    
+}
+#Pages{
+position: relative;
+}
+#Pages:hover .pagesMenu{
+    visibility: visible !important;
+}
+.pagesMenu ul{
+    display: block;
+}
+.pagesMenu{
+    position: absolute;
+    top: 40px;
+    left: -35px;
+    width: 160px;
+    padding-top: 60px;
+    z-index: 1;
+    background-color: white;
+    height: 205px;
+}
+#Shop:hover .shopMenu{
+
+  visibility: visible;
+}
+.shopMenu ul{
+    display: block;
+}
+.shopMenu{
+  visibility: hidden;
+}
+.shopMenu {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 7px;
+    top: 40px;
+    padding-top: 60px;
+    z-index: 1;
+    justify-content: space-around;
+    height: 472px;
+    background-color: white;
+
+}
+#Portfolio{
+    position: relative;
+}
+#Portfolio:hover .portfolioMenu{
+   visibility: visible !important;
+}
+.portfolioMenu{
+    position: absolute;
+    left: -35px;
+    top: 40px;
+    padding-top: 60px;
+    width: 220px;
+    z-index: 1;
+    background-color: white;
+    height: 290px;
+
+}
+.portfolioMenu ul{
+    display: block;
+}
+#portfolioLayouts{
+    position: relative;
+}
+#portfolioLayouts:hover .portfolioLayouts{
+    visibility: visible !important;
+
+}
+.portfolioLayouts{
+    position: absolute;
+    top: -9px;
+    left: 178px;
+    width: 221px;
+    z-index: 1;
+    background-color: white;
+    height: 220px;
+
+
+}
+#portfolioSingle {
+position: relative;
+}
+#portfolioSingle:hover .portfolioSingle{
+    visibility: visible !important;
+}
+
+.portfolioSingle{
+    position: absolute;
+    top: -9px;
+    left: 180px;
+    width: 175px;
+    z-index: 1;
+    background-color: white;
+    height: 220px;
+
+
+}
+#Blog ul{
+    display: block;
+}
+#Blog {
+    position: relative;
+}
+#Blog:hover .blogMenu{
+    visibility: visible !important;
+}
+.blogMenu{
+    position: absolute;
+    top: 30px;
+    left: -31px;
+    width: 157px;
+    padding-top: 60px;
+    z-index: 1;
+    background-color: white;
+    height: 210px;
+
+
+}
+#PostTypes:hover .postTypes{
+   visibility: visible !important;
+}
+.postTypes{
+    position: absolute;
+    top: 130px;
+    left: 157px;
+    width: 150px;
+    z-index: 1;
+    height: 265px;
+    background-color: white;
+
+
+}
+.elementsMenu ul{
+    display: block;
+}
+#Elements{
+    position: relative;
+}
+#Elements:hover .elementsMenu{
+ visibility: visible !important;
+}
+.elementsMenu{
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    width: 170px;
+    padding-top: 60px;
+    z-index: 1;
+    background-color: white;
+    height: 250px;
+
+}
+#Classic:hover .classicMenu{
+    visibility: visible !important;
+}
+.classicMenu{
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    width: 180px;
+    z-index: 1;
+    background-color: white;
+    height:240px
+
+
+
+}
+#Infographic:hover .infographicMenu{
+    visibility: visible !important;
+}
+.infographicMenu{
+    position: absolute;
+    left: 170px;
+    top: 93px;
+    width: 185px;
+    z-index: 1;
+    background-color: white;
+    height: 240px
+
+}
+#Interactive:hover .interactiveMenu{
+   visibility: visible !important;
+}
+.interactiveMenu{
+    position: absolute;
+    left: 170px;
+    top: 129px;
+    width: 185px;
+    z-index: 1;
+    background-color: white;
+    height: 240px;
+
+}
+#Typography:hover .typographyMenu{
+    visibility: visible!important;
+} 
+.typographyMenu{
+    position: absolute;
+    left: 170px;
+    top: 176px;
+    width: 180px;
+    z-index: 1;
+    background-color: white;
+    height: 270px;
+
+}
+.iconsSearch a {
+margin: 0px 15px;
+}
+.iconsSearch{
+    position: relative;
+}
+.iconsSearch .search  input:focus{
+    border:none;
+}
+#search  a{
+    color: #1b1b1b;
+}
+.iconsSearch .search  input{
+    position: absolute;
+    top: 65px;
+    right: 130px;
+    z-index:1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.iconsSearch .search button{
+    position: absolute;
+    top: 65px;
+    right: 130px;
+    border: none;
+    background: none;
+    color: grey;
+    z-index: 1;
+    padding: 10px;
+}
+.Searchactive{
+  visibility: visible !important;
+
+}
+
+/* Slider start */
+.slider .item img{
+    width: 100%;
+    height:500px
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 500px;
+   
+}
+.slider .images .item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 7s, transform 7s;
+
+}
+.activeImages{
+    opacity: 1 !important;
+    transform: scale(1,0.9);
+
+   
+   
+}
+.slider .paragraf{
+    position: absolute;
+    top: 117px;
+    left: 160px;
+}
+.slider .paragraf .paragrafHeader p{
+     color: #1b1b1b;
+    text-align: inherit;
+    line-height: 51px;
+    font-weight: 400;
+    font-size: 41px;
+    font-family: 'Playfair Display', serif;
+}
+.slider .paragraf .paragrafHeader p span{
+    color: red;
+    text-align: inherit;
+    line-height: 51px;
+    font-weight: 400;
+    font-size: 41px;
+    font-family: 'Playfair Display', serif;
+
+}
+.slider .paragraf p{
+    color: grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.icons{
+    position: absolute;
+    top: 250px;
+    font-size: 25px;
+    color: grey;
+    cursor: pointer;
+}
+.icon_right{
+right: 30px;
+
+}
+.icon_left{
+left: 30px;
+}
+/* Product start */
+.productMenu ul li {
+    margin-left: 30px;
+}
+.productMenu ul li:first-child a{
+    color:#f34f3f;
+}
+.productMenu ul li a{
+    color:#1b1b1b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    transition:color .2s;
+    text-transform: uppercase;
+}
+.productMenu ul li a:hover{
+    color:#f34f3f;
+}
+.productfillter{
+    display: flex;
+    justify-content: flex-end;
+}
+.productfillter h6 a{
+    color:#1b1b1b;
+    margin-right:15px;
+    text-transform: uppercase;
+}
+.cardMargin{
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+
+}
+.sold{
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    background: #2b2b2b;
+    color: white;
+    padding: 0px 0px;
+    height: 30px;
+}
+.sold h4{
+    font-size: 19px;
+    padding: 3px 6px;
+}
+.card img{
+    width: 100%;
+    transition:transform .3s;
+}
+.card img:hover {
+    transform: scale(1.1,1.1);
+}
+.cardParagraf h6{
+    color:#1b1b1b; ;
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cardParagraf p{
+    color: grey;
+    text-align: center;
+    font-size: 15px;
+    transition: color .5s;
+}
+.cardParagraf p:hover{
+    color:#f34f3f;
+}

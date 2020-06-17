@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,500,700,800i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/main_Home.css" >
+    <title>Main Home</title>
+</head>
+<body>
+   
+    <!-- Navbar start -->
+    @await Component.InvokeAsync("Header")
+    @*<header id="Navbar">
+        <div class="container containerPosetion">
+            <div class="row mt-5">
+                <div class="col-lg-12 colFlex">
+                    <div class="logo">
+                        <a href="#"> <img src="~/images/logo.png" alt="#"></a>
+                    </div>
+                    <div class="menu mt-2">
+                        <ul>
+                            <li class="home">
+                                <a href="#">Home</a>
+                                <div class="homeMenu color invisible">
+                                    <ul>
+                                        <li><a href="#">Main Home</a></li>
+                                        <li><a href="#">Grid Home</a></li>
+                                        <li><a href="#">Flower Shop</a></li>
+                                        <li><a href="#">Animated Slider</a></li>
+                                        <li><a href="#">Metro Showcase</a></li>
+                                        <li><a href="#">Carousel Showcase</a></li>
+                                        <li><a href="#">Landing</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="Pages">
+                                <a href="#">Pages</a>
+                                <div class="pagesMenu color invisible">
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">FAQ Page</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="Shop">
+                                <a href="#">Shop</a>
+                                <div class="shopMenu color">
+                                    <ul>
+                                        <h4>Product Types</h4>
+                                        <li><a asp-controller="Product" asp-action="Index">All Product</a></li>
+                                        <li><a href="#">Grouped Product</a></li>
+                                        <li><a href="#">Variable Product</a></li>
+                                        <li><a href="#">Virtual Product</a></li>
+                                        <li><a href="#">External Product</a></li>
+                                        <li><a href="#">Downloadable Product</a></li>
+                                        <li><a href="#">On Sale Product</a></li>
+                                        <li><a href="#">Out of Stock Product</a></li>
+                                        <li><a href="#">New Product</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Shop Pages</h4>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Cart</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                        <li><a href="#">Orders</a></li>
+                                        <li><a href="#">Downloads</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Shop Types</h4>
+                                        <li><a href="#">Product List</a></li>
+                                        <li><a href="#">Without Sidebar</a></li>
+                                        <li><a href="#">With Category Filter</a></li>
+                                        <li><a href="#">With Ordering Filter</a></li>
+                                        <li><a href="#">Shop Carousel</a></li>
+                                        <li><a href="#">Product Categories</a></li>
+                                        <li><a href="#">Single Category</a></li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Shop Layouts</h4>
+                                        <li><a href="#">Two Columns Grid</a></li>
+                                        <li><a href="#">Three Columns Grid</a></li>
+                                        <li><a href="#">Four Columns Grid</a></li>
+                                        <li><a href="#">Five Columns Wide</a></li>
+                                        <li><a href="#">Six Columns Wide</a></li>
+                                        <li><a href="#">Product Categories</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="Portfolio">
+                                <a href="#">Portfolio</a>
+                                <div class="portfolioMenu color invisible">
+                                    <ul>
+                                        <li><a href="#">Standard</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Masonry</a></li>
+                                        <li id="portfolioLayouts">
+                                            <a href="#">
+                                                Portfolio Layouts<i class="fas fa-angle-right ml-2"></i>
+                                            </a>
+                                            <div class="portfolioLayouts invisible ">
+                                                <ul>
+                                                    <li><a href="#">Two Columns Grid</a></li>
+                                                    <li><a href="#">Three Columns Grid</a></li>
+                                                    <li><a href="#">Four Columns</a></li>
+                                                    <li><a href="#">Four Columns Grid</a></li>
+                                                    <li><a href="#">Five Columns Wide</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="portfolioSingle">
+                                            <a href="#">
+                                                Portfolio Single <i class="fas fa-angle-right ml-3"></i>
+                                            </a>
+                                            <div class="portfolioSingle color invisible">
+                                                <ul>
+                                                    <li><a href="#">Small Images</a></liclass="d-none">
+                                                    <li><a href="#">Small Slider</a></li>
+                                                    <li><a href="#">Big Images</a></li>
+                                                    <li><a href="#">Big Slider</a></li>
+                                                    <li><a href="#">Gallery</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="Blog">
+                                <a href="#">Blog</a>
+                                <div class="blogMenu color  invisible">
+                                    <ul>
+                                        <li><a href="#">Masonry</a></li>
+                                        <li><a href="#">Standard</a></li>
+                                        <li id="PostTypes">
+                                            <a href="#">
+                                                Post Types <i class="fas fa-angle-right ml-2"></i>
+                                            </a>
+                                            <div class="postTypes invisible">
+                                                <ul>
+                                                    <li><a href="#">Standard</a></li>
+                                                    <li><a href="#">Gallery</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Quote</a></li>
+                                                    <li><a href="#">Audio</a></li>
+                                                    <li><a href="#">Video</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="Elements">
+                                <a href="#">Elements</a>
+                                <div class="elementsMenu color invisible">
+                                    <ul>
+                                        <li id="Classic">
+                                            <a href="#">
+                                                Classic <i class="fas fa-angle-right ml-5"></i>
+                                            </a>
+                                            <div class="classicMenu color invisible">
+                                                <ul>
+                                                    <li><a href="#">Accordions</a></li>
+                                                    <li><a href="#">Tabs</a></li>
+                                                    <li><a href="#">Buttons</a></li>
+                                                    <li><a href="#">Video Button</a></li>
+                                                    <li><a href="#">Contact Form</a></li>
+                                                    <li><a href="#">Buttons</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="Infographic">
+                                            <a href="#">
+                                                Infographic <i class="fas fa-angle-right ml-2"></i>
+                                            </a>
+                                            <div class="infographicMenu color invisible">
+                                                <ul>
+                                                    <li><a href="#">Blog List</a></li>
+                                                    <li><a href="#">Counters</a></li>
+                                                    <li><a href="#">Countdown</a></li>
+                                                    <li><a href="#">Google Maps</a></li>
+                                                    <li><a href="#">Progress Bar</a></li>
+                                                    <li><a href="#">Pie Charts</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="Interactive">
+                                            <a href="#">
+                                                Interactive <i class="fas fa-angle-right ml-3"></i>
+                                            </a>
+                                            <div class="interactiveMenu color invisible">
+                                                <ul>
+                                                    <li><a href="#">Image Gallery</a></li>
+                                                    <li><a href="#">Testimonials</a></li>
+                                                    <li><a href="#">Team</a></li>
+                                                    <li><a href="#">Banner</a></li>
+                                                    <li><a href="#">Shop List</a></li>
+                                                    <li><a href="#">Portfolio List</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="Typography">
+                                            <a href="#">
+                                                Typography <i class="fas fa-angle-right ml-2"></i>
+                                            </a>
+                                            <div class="typographyMenu color invisible">
+                                                <ul>
+                                                    <li><a href="#">Headings</a></li>
+                                                    <li><a href="#">Columns</a></li>
+                                                    <li><a href="#">Section Title</a></li>
+                                                    <li><a href="#">Blockquote</a></li>
+                                                    <li><a href="#">Dropcaps</a></li>
+                                                    <li><a href="#">Highlights</a></li>
+                                                    <li><a href="#">Separators</a></li>
+                                                    <li><a href="#">Custom Font</a></li>
+                                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                    </div>
+                    <div class="iconsSearch mt-2">
+                        <ul class="p-0" id="search">
+                            <li class=>
+                                <a href="#"><i class="fas fa-search"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-shopping-cart"></i> <sup>0</sup> <span>CART($0)</span> </a>
+
+                            </li>
+                        </ul>
+
+                        <div class="search invisible">
+                            <input type="text" placeholder="search">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>*@
+    <!-- Navbar end -->
+    @RenderBody()
+    <!-- Footer start -->
+    @await Component.InvokeAsync("Footer")
+    @*<footer>
+         Footer menu section start 
+        <section id="FooterMenu">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <h5>CUSTOMER SERVICE</h5>
+
+                        <div class="serviceMenu">
+
+                            <ul>
+                                <li><a href="#">Help & Contact Us</a></li>
+                                <li><a href="#">Returns & Refunds</a></li>
+                                <li><a href="#">Online Stores</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>COMPANY</h5>
+                        <div class="companyMenu">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Order Tracking</a></li>
+                                <li><a href="#">FAQ Page</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>SOCIAL MEDIA</h5>
+                        <div class="social">
+                            <ul>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">Tumblr</a></li>
+                                <li><a href="#">Pinterest</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5>ARCHIVE</h5>
+                        <div class="archiveMenu">
+                            <ul>
+                                <li><a href="#">Designer Shoes</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Feature Index</a></li>
+                                <li><a href="#">Login </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+         Footer menu section end 
+         Autor section start  
+        <section id="Author">
+            <div class="container">
+                <hr>
+                <div class="row ">
+
+                    <div class="col-lg-4">
+                        <div class="by_whom ">
+                            <ul class="p-0">
+                                <li>Powered by<a href="#">Abulfat Mammadov</a>2019</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="payment">
+                            <a href="#"><img src="images/footer-bottom-1.png" alt="#"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footerSocial">
+                            <ul>
+                                <li><a href="#">INSTAGRAM</a></li>
+                                <li><a href="#">FACEBOOK</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+         Autor section end  
+
+    </footer>*@
+    <!-- Footer end -->
+
+    <script src="https://kit.fontawesome.com/519744c97a.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/fiorello.js"></script>
+    <script src="~/js/main_Home.js"></script>
+</body>
+
+</html>

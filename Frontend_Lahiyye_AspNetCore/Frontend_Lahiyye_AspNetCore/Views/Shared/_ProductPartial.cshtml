@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ProductVM>
+@foreach (ProductVM Prod in Model)
+{
+    <div class="col-lg-3 card_hover">
+        <div class="card cardMargin">
+            <a href="#"> <img src="images/@Prod.Image" class="card-img-top" alt="..."></a>
+        </div>
+        <div class="cardParagraf">
+            <h6>@Prod.Title</h6>
+            <div class="addToCards">
+                <a href="#">Add to cart</a>
+
+            </div>
+            <div class="price">
+                <span>@Prod.Price</span>
+            </div>
+        </div>
+
+    </div>
+}
