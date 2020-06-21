@@ -57,7 +57,7 @@ using Frontend_Lahiyye_AspNetCore.ViewModels;
             WriteLiteral("<header id=\"Navbar\">\r\n    <div class=\"container containerPosetion\">\r\n        <div class=\"row mt-5\">\r\n            <div class=\"col-lg-12 colFlex\">\r\n                <div class=\"logo\">\r\n                    <a href=\"#\"> ");
             EndContext();
             BeginContext(227, 40, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "409f09c07a1f4bd684bb4e471684118f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5dbfe5b90d7d4918ba4315f0312a72d5", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -117,7 +117,7 @@ AddHtmlAttributeValue("", 246, Model.Logo, 246, 11, false);
                                     <li>");
             EndContext();
             BeginContext(1998, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62bbed0d25194049a32dad0673dedab0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "421cc6543ad54cfe8427219872242bb2", async() => {
                 BeginContext(2045, 11, true);
                 WriteLiteral("All Product");
                 EndContext();

@@ -12627,11 +12627,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abulfat\\Desktop\\HomeWork_AdminPanel\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\Abulfat\\Desktop\\FIORELLO_AdminPanel_HomeWork\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
       "projectName": "Frontend_Lahiyye_AspNetCore",
-      "projectPath": "C:\\Users\\Abulfat\\Desktop\\HomeWork_AdminPanel\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
+      "projectPath": "C:\\Users\\Abulfat\\Desktop\\FIORELLO_AdminPanel_HomeWork\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
       "packagesPath": "C:\\Users\\Abulfat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abulfat\\Desktop\\HomeWork_AdminPanel\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\obj\\",
+      "outputPath": "C:\\Users\\Abulfat\\Desktop\\FIORELLO_AdminPanel_HomeWork\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Abulfat\\AppData\\Roaming\\NuGet\\NuGet.Config",

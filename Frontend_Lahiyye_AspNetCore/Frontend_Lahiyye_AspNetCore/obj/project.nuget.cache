@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xOdydtbgA21qhi2ZjO6U2JSdiaFF1Gm+3C2IA9A7kiY9bqK9l5+bA9b4mzBDIkWB8/q+RAg/B2gF8a3AypZUPg==",
+  "dgSpecHash": "k6veo/2T1WH65dxGBk7aLyFWyTbFw8drRzS1CWRsdxBW8kTcynOatHM8psT5/76/U20IFtBCMe3p98MGydTZ/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Abulfat\\Desktop\\HomeWork_AdminPanel\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
+  "projectFilePath": "C:\\Users\\Abulfat\\Desktop\\FIORELLO_AdminPanel_HomeWork\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore\\Frontend_Lahiyye_AspNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Abulfat\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Abulfat\\.nuget\\packages\\microsoft.aspnetcore\\2.1.1\\microsoft.aspnetcore.2.1.1.nupkg.sha512",
