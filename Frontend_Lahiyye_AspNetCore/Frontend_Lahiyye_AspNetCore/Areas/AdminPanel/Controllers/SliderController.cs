@@ -51,11 +51,6 @@ namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult>  Create(Slider slider)
         {
-            //if (slider.Photo==null)
-            //{
-            //    ModelState.AddModelError("Photo", "Zehmet olmasa wekl secin ");
-            //    return View();
-            //}
             if (ModelState["Photo"].ValidationState==Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
             {
                 return View();
