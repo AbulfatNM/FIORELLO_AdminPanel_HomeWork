@@ -194,3 +194,4 @@ C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCor
 C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\obj\Debug\netcoreapp2.1\Frontend_Lahiyye_AspNetCore.csproj.CopyComplete
 C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\obj\Debug\netcoreapp2.1\Razor\Areas\AdminPanel\Views\Category\Edit.cshtml.g.cs
 C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\obj\Debug\netcoreapp2.1\Razor\Areas\AdminPanel\Views\Category\Delet.cshtml.g.cs
+C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\obj\Debug\netcoreapp2.1\Razor\Areas\AdminPanel\Views\Slider\Create.cshtml.g.cs
