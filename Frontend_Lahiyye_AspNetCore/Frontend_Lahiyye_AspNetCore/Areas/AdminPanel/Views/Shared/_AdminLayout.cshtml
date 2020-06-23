@@ -8,7 +8,7 @@
     <title>Majestic Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/admin/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/admin/vendors/base/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
     <link rel="stylesheet" href="~/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -24,7 +24,7 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="index.html"><img src="~/admin/images/logo.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo"asp-controller="Dashboard" asp-action="Index"><img src="~/admin/images/logo.svg" alt="logo" /></a>
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/admin/images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
@@ -182,7 +182,7 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel"  asp-controller="Slider" asp-action="Index">Slider list</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminPanel" asp-action="Index"  asp-controller="Slider">Slider list</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Create Slider</a></li>
                             </ul>
                         </div>
@@ -266,7 +266,7 @@
     <!-- inject:js -->
     <script src="~/admin/js/off-canvas.js"></script>
     <script src="~/admin/js/hoverable-collapse.js"></script>
-    <script src="js/template.js"></script>
+    @*<script src="~/admin/js/template.js"></script>*@
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="~/admin/js/dashboard.js"></script>
@@ -274,6 +274,7 @@
     <script src="~/admin/js/jquery.dataTables.js"></script>
     <script src="~/admin/js/dataTables.bootstrap4.js"></script>
     <!-- End custom js for this page-->
+    @*validations*@
     @RenderSection("scriptValidation",false)
    
 </body>
