@@ -111,7 +111,47 @@ namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
             _db.Sliders.Remove(slider);
            await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
+        }
+        [Area("AdminPanel")]
+        public async Task <IActionResult> Edit(int? id)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+            Slider slider = await _db.Sliders.FindAsync(id);
+            if (slider==null)
+            {
+                return NotFound();
+            }
+            return View(slider);
+        }
+        [HttpPost,Area("AdminPanel")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id,Slider slider)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            if (slider.Photo!=null)
+            {
+                if (slider.Photo.IsValidImg())
+                {
+                    ModelState.AddModelError("Photo", "Zehmet olmasa sekil secin");
+                    return View();
+                }
+                if (slider.Photo.MaxLenght(200))
+                {
+                    ModelState.AddModelError("Photo", "Zehmet olmasa 200 kbtden az sekil secin ");
+                    return View();
+                }
+                Slider dbSlider = await _db.Sliders.FindAsync(id);
+                Helper.DeleteImage(_env.WebRootPath, "images", dbSlider.Image);
+                dbSlider.Image= await slider.Photo.CopyImage(_env.WebRootPath, "images");
+               await _db.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }

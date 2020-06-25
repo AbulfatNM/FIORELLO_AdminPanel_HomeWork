@@ -9,8 +9,7 @@
         <div class="cardParagraf">
             <h6>@Prod.Title</h6>
             <div class="addToCards">
-                <a href="#">Add to cart</a>
-
+                <a asp-controller="Home" asp-action="Addbasket" asp-route-id="@Prod.Id" >Add to cart</a>
             </div>
             <div class="price">
                 <span>@Prod.Price</span>
