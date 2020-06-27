@@ -8,7 +8,8 @@ using Frontend_Lahiyye_AspNetCore.Models;
 using Frontend_Lahiyye_AspNetCore.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Server.Kestrel.Core.Adapter.Internal;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Newtonsoft.Json;
 
 namespace Frontend_Lahiyye_AspNetCore.Controllers
@@ -33,31 +34,31 @@ namespace Frontend_Lahiyye_AspNetCore.Controllers
 
             return View(homeVM);
         }
-        public async Task<IActionResult> Addbasket(int? id)
+
+        public async Task <IActionResult> AddBasket(int? id)
         {
             if (id==null)
             {
                 return NotFound();
             }
             Product product = await _db.Products.FindAsync(id);
-          
             if (product==null)
             {
                 return NotFound();
             }
-            List<BasketVM> products;
+            List<BasketProductVM> products;
             if (Request.Cookies["basket"]==null)
             {
-                products= new List<BasketVM>();
+                  products = new List<BasketProductVM>();
             }
             else
             {
-                products = JsonConvert.DeserializeObject<List<BasketVM>>(Request.Cookies["basket"]);
+                products = JsonConvert.DeserializeObject<List<BasketProductVM>>(Request.Cookies["basket"]);
             }
-            BasketVM checkProducts = products.FirstOrDefault(p => p.Id == id);
-            if (checkProducts==null)
+            BasketProductVM checkProduct = products.FirstOrDefault(p => p.Id == id);
+            if (checkProduct==null)
             {
-                BasketVM basketVM = new BasketVM()
+                BasketProductVM basketProductVM = new BasketProductVM()
                 {
                     Id = product.Id,
                     Image = product.Image,
@@ -65,25 +66,52 @@ namespace Frontend_Lahiyye_AspNetCore.Controllers
                     Title = product.Title,
                     Count = 1
                 };
-                products.Add(basketVM);
-
+                products.Add(basketProductVM);
             }
             else
             {
-                checkProducts.Count++;
+                checkProduct.Count++;
             }
-      
             string basket = JsonConvert.SerializeObject(products);
-            Response.Cookies.Append("basket",basket, new CookieOptions {MaxAge=TimeSpan.FromDays(15)});
+            Response.Cookies.Append("basket", basket, new CookieOptions { MaxAge = TimeSpan.FromDays(15) });
             return RedirectToAction(nameof(Index));
-
         }
         public IActionResult Basket()
         {
-            return Content(Request.Cookies["basket"]);
+            List<BasketProductVM> productVM;
+            if (Request.Cookies["basket"] != null)
+            {
+                productVM = JsonConvert.DeserializeObject<List<BasketProductVM>>(Request.Cookies["basket"]);
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            return View(productVM);
+            //BasketProductVM product = productVMs.FirstOrDefault(p => p.Id == 1);
+            //productVMs.Remove(product);
         }
-
-   
-
+        public IActionResult Remove(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            List<BasketProductVM> basketProducts =JsonConvert.DeserializeObject<List<BasketProductVM>>(Request.Cookies["basket"]);
+            BasketProductVM findIdProduct = basketProducts.FirstOrDefault(p => p.Id == id);
+            if (findIdProduct.Count==1)
+            {
+                basketProducts.Remove(findIdProduct);
+            }
+            else
+            {
+                findIdProduct.Count--;
+            }
+            string removeProduct = JsonConvert.SerializeObject(basketProducts);
+            Response.Cookies.Append("basket", removeProduct, new CookieOptions { MaxAge = TimeSpan.FromDays(15) });
+            return RedirectToAction(nameof(Basket)); 
+        }
+     
     }
 }

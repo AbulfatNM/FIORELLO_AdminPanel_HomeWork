@@ -68,7 +68,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("                        ");
             EndContext();
             BeginContext(379, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d0d73c027584f4d88fb64e23d79a5d5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d361b463b8d4f8d8fa5f9197ebc4f0d", async() => {
                 BeginContext(447, 13, true);
                 WriteLiteral("Create Slider");
                 EndContext();
@@ -126,7 +126,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("                                <tr>\r\n                                    <td class=\"py-1\">\r\n                                        ");
             EndContext();
             BeginContext(1263, 84, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f3898873a6274020b02da8344fd27226", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7b1b3f2af10249d48668066cbd08118a", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -153,7 +153,7 @@ AddHtmlAttributeValue("", 1282, slider.Image, 1282, 13, false);
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1474, 209, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9fb13c3af0445a194312134427c385f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f4529b194a32455cb5d425626081ceaf", async() => {
                 BeginContext(1547, 132, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-account-card-details\"></i>\r\n                                        ");
                 EndContext();
@@ -189,7 +189,7 @@ AddHtmlAttributeValue("", 1282, slider.Image, 1282, 13, false);
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1725, 199, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fa6937e2df6b41fb947faf7632b4867d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e6065a0ad647aba69625b13f7370b3", async() => {
                 BeginContext(1796, 124, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-tooltip-edit\"></i>\r\n                                        ");
                 EndContext();
@@ -225,7 +225,7 @@ AddHtmlAttributeValue("", 1282, slider.Image, 1282, 13, false);
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1966, 202, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "422f5f71c15146f8a6fde70c5b64d042", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d77a111397f945a4a7575944cdb47ba9", async() => {
                 BeginContext(2038, 126, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-delete-variant\"></i>\r\n                                        ");
                 EndContext();

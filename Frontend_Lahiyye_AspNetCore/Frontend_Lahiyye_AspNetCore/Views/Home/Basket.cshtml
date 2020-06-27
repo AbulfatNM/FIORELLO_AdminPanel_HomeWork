@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BasketProductVM>
+
+    @{
+        ViewData["Title"] = "Basket";
+    }
+    <div class="container">
+        <div class="row">
+
+           
+            <div class="col-lg-12 card_hover">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Basket Product</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Image
+                                        </th>
+                                        <th>
+                                            Product Name
+                                        </th>
+                                        <th>
+                                            Price
+                                        </th>
+                                        <th>
+                                           Count
+                                        </th>
+                                        <th>
+                                            Remove product
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (BasketProductVM Prod in Model)
+                                    {
+                                    <tr>
+                                        <td class="py-1">
+                                            <img style="width:150px; height:150px" src="~/images/@Prod.Image" alt="image" />
+                                        </td>
+                                        <td>
+                                            @Prod.Title;
+                                        </td>
+                                        <td>
+                                            @Prod.Price
+                                        </td>
+                                        <td>
+                                            @Prod.Count
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Home" asp-action="Remove" asp-route-id="@Prod.Id" class="btn btn-danger text text-white">Remove</a>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

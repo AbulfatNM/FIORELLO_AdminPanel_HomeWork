@@ -22,6 +22,7 @@
                                 </ul>
                             </div>
                         </li>
+                      
                         <li id="Pages">
                             <a href="#">Pages</a>
                             <div class="pagesMenu color invisible">
@@ -35,6 +36,7 @@
                         <li id="Shop">
                             <a href="#">Shop</a>
                             <div class="shopMenu color">
+                                
                                 <ul>
                                     <h4>Product Types</h4>
                                     <li><a asp-controller="Product" asp-action="Index">All Product</a></li>
@@ -47,6 +49,7 @@
                                     <li><a href="#">Out of Stock Product</a></li>
                                     <li><a href="#">New Product</a></li>
                                 </ul>
+                               
                                 <ul>
                                     <h4>Shop Pages</h4>
                                     <li><a href="#">My Account</a></li>
@@ -103,7 +106,7 @@
                                         </a>
                                         <div class="portfolioSingle color invisible">
                                             <ul>
-                                                <li><a href="#">Small Images</a></liclass="d-none">
+                                                <li><a href="#">Small Images</a></li>
                                                 <li><a href="#">Small Slider</a></li>
                                                 <li><a href="#">Big Images</a></li>
                                                 <li><a href="#">Big Slider</a></li>
@@ -139,7 +142,11 @@
                             </div>
                         </li>
                         <li id="Elements">
-                            <a href="#">Elements</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                @ViewBag.LoginUser
+                            }
+                            @*<a href="#">Elements</a>
                             <div class="elementsMenu color invisible">
                                 <ul>
                                     <li id="Classic">
@@ -204,17 +211,20 @@
                                                 <li><a href="#">Separators</a></li>
                                                 <li><a href="#">Custom Font</a></li>
                                             </ul>
+                                            </div>
                                     </li>
                                 </ul>
-                            </div>
-                </div>
+                            </div>*@
+                              </li>
+                            </ul>
+                 </div>
                 <div class="iconsSearch mt-2">
-                    <ul class="p-0" id="search" style="margin-left:-12px">
-                        <li>
+                    <ul class="p-0" style="margin-left:-12px" id="search">
+                        <li >
                             <a href="#"><i class="fas fa-search"></i></a>
                         </li>
-                        <li style="margin-left:-12px" >
-                            <a asp-controller="Home" asp-action="Basket"><i class="fas fa-shopping-cart"></i> <sup>@ViewBag.BasketCount</sup> <span style="font-size:14px">CART($@ViewBag.BasketPrice)</span> </a>
+                        <li style="margin-left:-12px;">
+                            <a asp-controller="Home" asp-action="Basket"><i class="fas fa-shopping-cart"></i> <sup>@ViewBag.basketProdCount</sup> <span style="font-size:14px">CART($@ViewBag.basketProdPrice)</span> </a>
 
                         </li>
                     </ul>

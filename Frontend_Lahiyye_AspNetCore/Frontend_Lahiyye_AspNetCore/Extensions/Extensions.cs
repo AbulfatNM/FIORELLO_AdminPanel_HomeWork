@@ -18,7 +18,7 @@ namespace Frontend_Lahiyye_AspNetCore.Extensions
         {
             return file.Length / 1020 >= kb;
         }
-        public   static async Task <string> CopyImage(this IFormFile file,string root,string folder)
+        public static async Task <string> CopyImage(this IFormFile file,string root,string folder)
         {
             string path = Path.Combine(root, folder);
             string sliderName = Guid.NewGuid() + file.FileName;
