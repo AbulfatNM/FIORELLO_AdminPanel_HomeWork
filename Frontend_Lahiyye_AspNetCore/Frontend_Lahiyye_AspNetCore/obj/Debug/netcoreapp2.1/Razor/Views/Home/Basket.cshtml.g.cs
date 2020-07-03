@@ -109,7 +109,7 @@ using Frontend_Lahiyye_AspNetCore.ViewModels;
             WriteLiteral("                                    <tr>\r\n                                        <td class=\"py-1\">\r\n                                            ");
             EndContext();
             BeginContext(1688, 80, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6c2b1a0d0fff437d827b643755ea3b57", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "368327bb80db4f4ab819195ec0e3ce25", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -166,7 +166,7 @@ AddHtmlAttributeValue("", 1741, Prod.Image, 1741, 11, false);
             WriteLiteral("\r\n                                        </td>\r\n                                        <td>\r\n                                            ");
             EndContext();
             BeginContext(2358, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17c0cd90ec7c4b3babc619df86c11ee5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d64f679bbc3f4960ade10acece8b7ef7", async() => {
                 BeginContext(2466, 6, true);
                 WriteLiteral("Remove");
                 EndContext();
