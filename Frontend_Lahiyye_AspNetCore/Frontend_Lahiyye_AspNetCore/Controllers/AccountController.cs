@@ -61,8 +61,8 @@ namespace Frontend_Lahiyye_AspNetCore.Controllers
         }
         public async Task <IActionResult> LogOut()
         {
-           await _signInManager.SignOutAsync();
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index","Home");
         }
         public IActionResult LogIn()
         {
@@ -80,7 +80,6 @@ namespace Frontend_Lahiyye_AspNetCore.Controllers
             AppUser loginUser = await _userManager.FindByEmailAsync(login.Email);
             if (loginUser==null)
             {
-                //
                 ModelState.AddModelError("", "Email və ya parolunuz səfdir");
                 return View(login);
             }
@@ -89,6 +88,11 @@ namespace Frontend_Lahiyye_AspNetCore.Controllers
             {
                 ModelState.AddModelError("", "Email və ya parolunuz səfdir");
                 return View(login);
+            }
+            if (loginUser.IsDelete == true)
+            {
+                ModelState.AddModelError("", "Sizin hesabiniz silinmişdir !!");
+                return View();
             }
             return RedirectToAction(nameof(HomeController.Index), "Home");
 

@@ -72,7 +72,7 @@ using Frontend_Lahiyye_AspNetCore.Helpers;
                     ");
             EndContext();
             BeginContext(300, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9205ca4d2ee4287b3faabfb9b037c72", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "284fab369c49419e98066f5ddaf94598", async() => {
                 BeginContext(368, 15, true);
                 WriteLiteral("Create Category");
                 EndContext();
@@ -132,7 +132,7 @@ using Frontend_Lahiyye_AspNetCore.Helpers;
             WriteLiteral("\r\n                                    </td>\r\n                                    <td>\r\n                                        ");
             EndContext();
             BeginContext(1314, 211, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "235894cbd9ca4b78a27fa38b131b4c59", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "153af4dfc033442fb29a1cc68eb0e7ec", async() => {
                 BeginContext(1389, 132, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-account-card-details\"></i>\r\n                                        ");
                 EndContext();
@@ -168,7 +168,7 @@ using Frontend_Lahiyye_AspNetCore.Helpers;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1567, 201, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a4490430e2f4a209a2ab96460a434bc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "459811cde8eb454bb3c4e9d30222a7ff", async() => {
                 BeginContext(1640, 124, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-tooltip-edit\"></i>\r\n                                        ");
                 EndContext();
@@ -204,7 +204,7 @@ using Frontend_Lahiyye_AspNetCore.Helpers;
             WriteLiteral("\r\n                                        ");
             EndContext();
             BeginContext(1810, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a17f1aa35bae4effbc9eb58e8129996f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "974b7d950be647729dcf8173980734cb", async() => {
                 BeginContext(1883, 126, true);
                 WriteLiteral("\r\n                                            <i class=\"mdi mdi-delete-variant\"></i>\r\n                                        ");
                 EndContext();

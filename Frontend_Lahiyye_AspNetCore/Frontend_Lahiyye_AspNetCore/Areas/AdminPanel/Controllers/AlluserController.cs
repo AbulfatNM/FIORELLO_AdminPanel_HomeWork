@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 using Frontend_Lahiyye_AspNetCore.Helpers;
 using Frontend_Lahiyye_AspNetCore.Models;
 using Frontend_Lahiyye_AspNetCore.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
 {
     [Area("AdminPanel")]
+    [Authorize(Roles ="Admin")]
     public class AlluserController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
-        private readonly RoleManager<IdentityRole> _rolMeneger;
 
-        public AlluserController(UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
+        public AlluserController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;
-            _rolMeneger = roleManager;
         }
      
         public async Task <IActionResult> Index()
@@ -36,7 +36,9 @@ namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
                     FullName = user.FullName,
                     UserName = user.UserName,
                     Email = user.Email,
-                    Role = (await _userManager.GetRolesAsync(user))[0]
+                    Role = (await _userManager.GetRolesAsync(user))[0],
+                    IsDelete=user.IsDelete
+                    
                 };
                 usersVM.Add(userVM);
             }
@@ -63,15 +65,17 @@ namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
                 await _userManager.RemoveFromRoleAsync(user, oldRole);
                 await _userManager.AddToRoleAsync(user, rolname);
             }
-            //var userRol = await _rolMeneger.FindByNameAsync(rolname);
-        
-           
-        
             return RedirectToAction("Index");
-
-
         }
+        public async Task <IActionResult> RemoveUser(string email)
+        {
+            AppUser userEmail = await _userManager.FindByEmailAsync(email);
+            userEmail.IsDelete = true;
+            await _userManager.UpdateAsync(userEmail);
 
+
+            return RedirectToAction("Index");
+        }
 
     }
     }

@@ -7,12 +7,14 @@ using Frontend_Lahiyye_AspNetCore.DAL;
 using Frontend_Lahiyye_AspNetCore.Extensions;
 using Frontend_Lahiyye_AspNetCore.Helpers;
 using Frontend_Lahiyye_AspNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class SliderController : Controller
     {
         private readonly AppDbContext _db;

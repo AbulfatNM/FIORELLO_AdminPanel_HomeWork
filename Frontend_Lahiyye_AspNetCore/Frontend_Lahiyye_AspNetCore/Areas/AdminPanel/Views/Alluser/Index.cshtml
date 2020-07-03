@@ -21,33 +21,41 @@
                             <th scope="col">Email</th>
                             <th>Rols</th>
                             <th>Change Rols</th>
+                            <th>Remove User</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (UserVM user in Model)
+                        @foreach (UserVM user in Model.Where(e=>e.IsDelete==false))
                         {
-                            <tr>
-                                <td>@user.FullName</td>
-                                <td>@user.Email</td>
-                                <td>@user.Role</td>
-                                <td>
-                                    <form method="post" asp-action="ChangeRols">
-                                        <select name="rolname">
-                                            @foreach (string item in Enum.GetNames(typeof(Helper.UserRols)))
+                        <tr>
+                            <td>@user.FullName</td>
+                            <td>@user.Email</td>
+                            <td>@user.Role</td>
+
+                            <td>
+                                <form method="post" asp-action="ChangeRols">
+                                    <select name="rolname">
+                                        @foreach (string item in Enum.GetNames(typeof(Helper.UserRols)))
+                                        {
+                                            if (item != user.Role)
                                             {
-                                                if (item != user.Role)
-                                                {
-                                                    <option value="@item">
-                                                        @item
-                                                    </option>
-                                                }
+                                                <option value="@item">
+                                                    @item
+                                                </option>
                                             }
-                                        </select>
-                                        <input name="email" type="hidden" value="@user.Email" />
-                                        <input type="submit" class="btn btn-success" value="change" />
-                                    </form>
-                                </td>
-                            </tr>
+                                        }
+                                    </select>
+                                    <input name="email" type="hidden" value="@user.Email" />
+                                    <input type="submit" class="btn btn-success ml-3" value="Change" />
+                                </form>
+                            </td>
+                            <td>
+                                @if (user.Role != Helper.UserRols.Admin.ToString())
+                                {
+                                    <a asp-action="RemoveUser" asp-route-email="@user.Email" class="btn btn-danger">Remove</a>
+                                }
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>

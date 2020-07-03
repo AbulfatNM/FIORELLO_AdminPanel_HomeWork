@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Frontend_Lahiyye_AspNetCore.DAL;
 using Frontend_Lahiyye_AspNetCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Frontend_Lahiyye_AspNetCore.Areas.AdminPanel.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private readonly AppDbContext _db;

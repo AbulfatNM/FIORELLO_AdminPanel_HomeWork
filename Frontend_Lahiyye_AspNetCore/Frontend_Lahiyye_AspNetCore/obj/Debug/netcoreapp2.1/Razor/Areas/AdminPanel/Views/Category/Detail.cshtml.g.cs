@@ -83,7 +83,7 @@ using Frontend_Lahiyye_AspNetCore.Helpers;
             WriteLiteral("</h5>\r\n    </div>\r\n</div>\r\n<div class=\"row mt-4\">\r\n    <div class=\"col-lg-12\">\r\n        ");
             EndContext();
             BeginContext(285, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0688783388404552b31f2d717f1199e9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "162b21d3aca44b31aa03cef55ca2746e", async() => {
                 BeginContext(328, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

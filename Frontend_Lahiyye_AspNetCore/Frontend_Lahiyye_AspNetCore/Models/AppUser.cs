@@ -11,5 +11,6 @@ namespace Frontend_Lahiyye_AspNetCore.Models
     {
         [Required,StringLength(150)]
         public string FullName { get; set; }
+        public bool IsDelete { get; set; } = false;
     }
 }
