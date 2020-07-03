@@ -18,8 +18,18 @@ using Frontend_Lahiyye_AspNetCore.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.ViewModels;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.Helpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b43228742f8fbb316d388d39bc95ad133fec5293", @"/Areas/AdminPanel/Views/Slider/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da68e2614a8e3ad9ab5aa50fb7bdeab3ef9dfa6e", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f720a429a257015bf8efcdc90120ea55f6ffac6", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_Slider_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Slider>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("style", new global::Microsoft.AspNetCore.Html.HtmlString("width:450px; height:250px;"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -53,7 +63,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("<div class=\"row  justify-content-center\">\r\n    ");
             EndContext();
             BeginContext(62, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4a6ced3e1b2a48768c88273eee232615", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cbcb98071991407aaf50d8c2470c14f4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -80,7 +90,7 @@ AddHtmlAttributeValue("", 81, Model.Image, 81, 12, false);
             WriteLiteral("\r\n</div>\r\n<div class=\"row\">\r\n    ");
             EndContext();
             BeginContext(186, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2f4c3bd8a93e497a921b5ca63ad6fa01", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cdc96400b714a639059d5854dc68bd6", async() => {
                 BeginContext(229, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

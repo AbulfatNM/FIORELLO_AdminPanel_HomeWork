@@ -18,8 +18,18 @@ using Frontend_Lahiyye_AspNetCore.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.ViewModels;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.Helpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bc5608237bfe45ec788b585283da7b530d72898", @"/Areas/AdminPanel/Views/Category/Delet.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da68e2614a8e3ad9ab5aa50fb7bdeab3ef9dfa6e", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f720a429a257015bf8efcdc90120ea55f6ffac6", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_Category_Delet : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Category>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("forms-sample"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -80,7 +90,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("</h5>\r\n            <p class=\"text-danger mt-4\">Silmek istediyinize eminsizmi ??</p>\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"row mt-4\">\r\n        <div class=\"col-lg-12\">\r\n            ");
             EndContext();
             BeginContext(391, 145, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0bed60d2f324c7c9a8163bfa43cb022", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "375961546c4b42d08c6d9959a7e218eb", async() => {
                 BeginContext(432, 97, true);
                 WriteLiteral("\r\n                <button type=\"submit\" class=\"btn btn-danger mt-2\">Delete</button>\r\n            ");
                 EndContext();
@@ -105,7 +115,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("\r\n        </div>\r\n        <div class=\"col-lg-12 mt-3\">\r\n            ");
             EndContext();
             BeginContext(604, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30985a8452da4492a4d073394aa4d15c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "209c6d3cc3694341a0809130f0fcdc4c", async() => {
                 BeginContext(647, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

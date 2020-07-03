@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace Frontend_Lahiyye_AspNetCore.ViewModels
 {
-    public class RegisterVM
+    public class LoginVM
     {
-        [Required, StringLength(150)]
-        public string FullName { get; set; }
-        [Required, StringLength(40)]
-        public string UserName { get; set; }
         [Required, DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [Required, DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required, Compare(nameof(Password),ErrorMessage ="Zəhmət olmasa parolunuzu yeniden yazın"), DataType(DataType.Password)]
-        public string CheckPasswoord { get; set; }
-      
     }
 }

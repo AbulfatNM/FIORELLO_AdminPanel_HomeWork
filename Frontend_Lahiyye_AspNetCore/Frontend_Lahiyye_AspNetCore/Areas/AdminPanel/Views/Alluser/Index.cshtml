@@ -1,0 +1,58 @@
+﻿@model IEnumerable<UserVM>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class=" container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th>Rols</th>
+                            <th>Change Rols</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (UserVM user in Model)
+                        {
+                            <tr>
+                                <td>@user.FullName</td>
+                                <td>@user.Email</td>
+                                <td>@user.Role</td>
+                                <td>
+                                    <form method="post" asp-action="ChangeRols">
+                                        <select name="rolname">
+                                            @foreach (string item in Enum.GetNames(typeof(Helper.UserRols)))
+                                            {
+                                                if (item != user.Role)
+                                                {
+                                                    <option value="@item">
+                                                        @item
+                                                    </option>
+                                                }
+                                            }
+                                        </select>
+                                        <input name="email" type="hidden" value="@user.Email" />
+                                        <input type="submit" class="btn btn-success" value="change" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

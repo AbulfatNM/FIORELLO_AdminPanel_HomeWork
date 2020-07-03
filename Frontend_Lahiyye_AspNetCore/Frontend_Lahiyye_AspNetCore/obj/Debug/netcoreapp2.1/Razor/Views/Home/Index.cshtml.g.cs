@@ -796,7 +796,7 @@ WriteAttributeValue("", 1915, Cate.Name, 1915, 10, false);
                             ");
             EndContext();
             BeginContext(29078, 694, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f15aa3507964548b6324f04d64d7ff1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19ba3a78214643d490f9294bd792f0f7", async() => {
                 BeginContext(29095, 670, true);
                 WriteLiteral(@"
                                 <h2>Join The Colorful Bunch!</h2>

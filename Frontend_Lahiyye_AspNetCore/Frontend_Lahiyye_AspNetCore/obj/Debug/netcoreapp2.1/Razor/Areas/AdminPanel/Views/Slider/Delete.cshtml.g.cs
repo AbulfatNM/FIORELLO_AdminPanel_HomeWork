@@ -18,8 +18,18 @@ using Frontend_Lahiyye_AspNetCore.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.ViewModels;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Abulfat\Desktop\FIORELLO_AdminPanel_HomeWork\Frontend_Lahiyye_AspNetCore\Frontend_Lahiyye_AspNetCore\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using Frontend_Lahiyye_AspNetCore.Helpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a1343a5248f63fdd5eea42c6e6004d27856372ad", @"/Areas/AdminPanel/Views/Slider/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da68e2614a8e3ad9ab5aa50fb7bdeab3ef9dfa6e", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f720a429a257015bf8efcdc90120ea55f6ffac6", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     public class Areas_AdminPanel_Views_Slider_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Slider>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("style", new global::Microsoft.AspNetCore.Html.HtmlString("width:450px; height:250px;"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -63,7 +73,7 @@ using Frontend_Lahiyye_AspNetCore.Models;
             WriteLiteral("\r\n\r\n    <div class=\"row  justify-content-center\">\r\n        ");
             EndContext();
             BeginContext(116, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "931a1224d57d4d8ab36d8442279efe9f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c4a64b1c621a4154a72186459e906d50", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -90,7 +100,7 @@ AddHtmlAttributeValue("", 135, Model.Image, 135, 12, false);
             WriteLiteral("\r\n    \r\n\r\n    </div>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n        <p class=\"text-danger mt-4\"> Silmek istediyinize eminsizmi ??</p>\r\n        ");
             EndContext();
             BeginContext(360, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9bf47c5f7a3e4aaeb1ef497ced472aa1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fcfcff23579e4130b5bcb0329b15d9c9", async() => {
                 BeginContext(401, 89, true);
                 WriteLiteral("\r\n            <button type=\"submit\" class=\"btn btn-danger mt-2\">Delete</button>\r\n        ");
                 EndContext();
@@ -115,7 +125,7 @@ AddHtmlAttributeValue("", 135, Model.Image, 135, 12, false);
             WriteLiteral("\r\n    </div>\r\n    <div class=\"col-lg-12\">\r\n        ");
             EndContext();
             BeginContext(548, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccf6eb04140f40e3bf48a0f4cae105f0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "964df877c7fb4fc6bb5193887ffa5f1b", async() => {
                 BeginContext(596, 7, true);
                 WriteLiteral("Go Back");
                 EndContext();

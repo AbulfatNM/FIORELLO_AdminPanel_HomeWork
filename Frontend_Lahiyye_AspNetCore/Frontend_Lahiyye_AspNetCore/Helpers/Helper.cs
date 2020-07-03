@@ -18,5 +18,11 @@ namespace Frontend_Lahiyye_AspNetCore.Helpers
             }
             
         }
+        public enum UserRols
+        { 
+            Admin,
+            Member
+        }
+
     }
 }

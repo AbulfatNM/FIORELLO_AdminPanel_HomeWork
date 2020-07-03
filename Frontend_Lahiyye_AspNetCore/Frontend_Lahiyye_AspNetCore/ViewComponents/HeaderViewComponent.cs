@@ -48,6 +48,7 @@ namespace Frontend_Lahiyye_AspNetCore.ViewComponents
 
             return View(await Task.FromResult(model));
         }
+       
 
     }
 }

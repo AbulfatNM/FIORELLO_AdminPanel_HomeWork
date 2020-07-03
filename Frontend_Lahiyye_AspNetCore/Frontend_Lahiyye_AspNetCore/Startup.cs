@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Frontend_Lahiyye_AspNetCore.DAL;
+using Frontend_Lahiyye_AspNetCore.Helpers;
 using Frontend_Lahiyye_AspNetCore.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,7 +38,7 @@ namespace Frontend_Lahiyye_AspNetCore
                  IdentityOptions.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
                  IdentityOptions.Lockout.AllowedForNewUsers = true;
 
-             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders().AddErrorDescriber<CustomIdentityError>();
             services.AddMvc();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(_config["ConnectionStrings:DefaultConnection"])
